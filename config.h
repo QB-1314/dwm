@@ -72,6 +72,9 @@ static const char *hibernatecmd[]  = { "/home/omega/.local/bin/hibernate.sh", NU
 
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
+//static const char *monbrightnessup[] = { "/home/omega/.local/bin/monbrightnessup.sh", NULL };
+//static const char *monbrightnessdown[] = { "/home/omega/.local/bin/monbrightnessdown.sh", NULL };
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_z,      spawn,          {.v = dmenucmd } },
@@ -86,6 +89,8 @@ static Key keys[] = {
 	{ MODKEY,              XK_backslash,       spawn,          {.v = mutevol } },
 	{ MODKEY,              XK_bracketright,    spawn,          {.v = upvol   } },
 	{ 0,                   XK_Print,           spawn,          {.v = screenshotcmd } },
+//{ 0,           XF86XK_MonBrightnessDown,   spawn,          {.v = monbrightnessdown} },
+//{ 0,           XF86XK_MonBrightnessUp,     spawn,          {.v = monbrightnessup } },
 //{ MODKEY|ShiftMask,         XK_space, togglealwaysontop,   {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
