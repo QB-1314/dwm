@@ -1,4 +1,6 @@
-st
+dwm
 *.o
 *.orig
 *.rej
+
+dwm
