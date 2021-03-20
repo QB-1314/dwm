@@ -82,7 +82,8 @@ static const char *hibernatecmd[] = {"/home/omega/.local/bin/hibernate.sh",
                                      NULL};
 
 static const char *screenkeycmd[] = {"/home/omega/.local/bin/sck-tog.sh", NULL};
-static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
+static const char *screenshotcmd[] = {"/home/omega/.local/bin/screenshot.sh",
+                                      NULL};
 
 // static const char *monbrightnessup[] = {
 // "/home/omega/.local/bin/monbrightnessup.sh", NULL }; static const char
