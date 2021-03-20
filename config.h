@@ -70,6 +70,7 @@ static const char *dmenucmd[] = {
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"st", NULL};
 static const char *alacrittycmd[] = {"alacritty", NULL};
+// static const char *fcitx5cmd[] = {"fcitx5", NULL};
 static const char *browsercmd[] = {"google-chrome-stable", NULL};
 
 static const char *upvol[] = {"/home/omega/.local/bin/vol-up.sh", NULL};
@@ -93,6 +94,7 @@ static Key keys[] = {
     {MODKEY, XK_z, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_y, spawn, {.v = alacrittycmd}},
+    // {MODKEY, XK_r, spawn, {.v = fcitx5cmd}},
     {MODKEY, XK_g, spawn, {.v = browsercmd}},
     {MODKEY | ShiftMask, XK_p, spawn, {.v = hibernatecmd}},
     {0, XF86XK_PowerOff, spawn, {.v = suspendcmd}},
