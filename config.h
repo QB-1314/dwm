@@ -67,28 +67,28 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
-static const char *termcmd[]        = {"st", NULL};
-static const char *alacrittycmd[]   = {"alacritty", NULL};
-static const char *fcitx5cmd[]      = {"fcitx5", NULL};
-static const char *thunderbirdcmd[] = {"thunderbird", NULL};
-static const char *clipmenucmd[]    = {"/usr/bin/clipmenu", NULL};
-static const char *qutebroswercmd[] = {"qutebroswer", NULL};
+static const char *termcmd[]        = {"st", NULL                } ;
+static const char *alacrittycmd[]   = {"alacritty", NULL         } ;
+static const char *fcitx5cmd[]      = {"fcitx5", NULL            } ;
+static const char *thunderbirdcmd[] = {"thunderbird", NULL       } ;
+static const char *clipmenucmd[]    = {"/usr/bin/clipmenu", NULL } ;
+static const char *qutebroswercmd[] = {"qutebroswer", NULL       } ;
 static const char *browsercmd[] = {
     "google-chrome-stable", "--proxy-server=http://127.0.0.1:7890", NULL};
 
-static const char *upvol[]         = {"/home/omega/.local/bin/vol-up.sh", NULL};
-static const char *downvol[]       = {"/home/omega/.local/bin/vol-down.sh", NULL};
-static const char *mutevol[]       = {"/home/omega/.local/bin/vol-toggle.sh", NULL};
+static const char *upvol[]         = {"/home/km/.local/bin/vol-up.sh", NULL     } ;
+static const char *downvol[]       = {"/home/km/.local/bin/vol-down.sh", NULL   } ;
+static const char *mutevol[]       = {"/home/km/.local/bin/vol-toggle.sh", NULL } ;
 
-static const char *suspendcmd[]    = {"/home/omega/.local/bin/suspend.sh", NULL};
-static const char *hibernatecmd[]  = {"/home/omega/.local/bin/hibernate.sh", NULL};
+static const char *suspendcmd[]    = {"/home/km/.local/bin/suspend.sh", NULL    } ;
+static const char *hibernatecmd[]  = {"/home/km/.local/bin/hibernate.sh", NULL  } ;
 
-static const char *screenkeycmd[]  = {"/home/omega/.local/bin/sck-tog.sh", NULL};
-static const char *screenshotcmd[] = {"/home/omega/.local/bin/screenshot.sh", NULL};
+static const char *screenkeycmd[]  = {"/home/km/.local/bin/sck-tog.sh", NULL    } ;
+static const char *screenshotcmd[] = {"/home/km/.local/bin/screenshot.sh", NULL } ;
 
 // static const char *monbrightnessup[] = {
-// "/home/omega/.local/bin/monbrightnessup.sh", NULL }; static const char
-// *monbrightnessdown[] = { "/home/omega/.local/bin/monbrightnessdown.sh", NULL
+// "/home/km/.local/bin/monbrightnessup.sh", NULL }; static const char
+// *monbrightnessdown[] = { "/home/km/.local/bin/monbrightnessdown.sh", NULL
 // };
 
 static Key keys[] = {
