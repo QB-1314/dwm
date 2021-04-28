@@ -76,41 +76,43 @@ static const char *qutebroswercmd[] = {"qutebroswer", NULL       } ;
 static const char *browsercmd[] = {
     "google-chrome-stable", "--proxy-server=http://127.0.0.1:7890", NULL};
 
-static const char *upvol[]         = {"/home/km/.local/bin/vol-up.sh", NULL     } ;
-static const char *downvol[]       = {"/home/km/.local/bin/vol-down.sh", NULL   } ;
-static const char *mutevol[]       = {"/home/km/.local/bin/vol-toggle.sh", NULL } ;
+static const char *upvol[]         = {"/home/qb/.local/bin/vol-up.sh"  , NULL   } ;
+static const char *downvol[]       = {"/home/qb/.local/bin/vol-down.sh", NULL   } ;
+static const char *mutevol[]       = {"/home/qb/.local/bin/vol-toggle.sh", NULL   } ;
 
-static const char *suspendcmd[]    = {"/home/km/.local/bin/suspend.sh", NULL    } ;
-static const char *hibernatecmd[]  = {"/home/km/.local/bin/hibernate.sh", NULL  } ;
+//static const char *lightup[]       = {"/home/qb/.local/bin/vol-toggle.sh"}
 
-static const char *screenkeycmd[]  = {"/home/km/.local/bin/sck-tog.sh", NULL    } ;
-static const char *screenshotcmd[] = {"/home/km/.local/bin/screenshot.sh", NULL } ;
+static const char *suspendcmd[]    = {"/home/qb/.local/bin/suspend.sh", NULL    } ;
+static const char *hibernatecmd[]  = {"/home/qb/.local/bin/hibernate.sh", NULL  } ;
+
+static const char *screenkeycmd[]  = {"/home/qb/.local/bin/sck-tog.sh", NULL    } ;
+static const char *screenshotcmd[] = {"/home/qb/.local/bin/screenshot.sh", NULL } ;
 
 // static const char *monbrightnessup[] = {
-// "/home/km/.local/bin/monbrightnessup.sh", NULL }; static const char
-// *monbrightnessdown[] = { "/home/km/.local/bin/monbrightnessdown.sh", NULL
+// "/home/qb/.local/bin/monbrightnessup.sh", NULL }; static const char
+// *monbrightnessdown[] = { "/home/qb/.local/bin/monbrightnessdown.sh", NULL
 // };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY             , XK_z                    , spawn          , {.v = dmenucmd}}       ,
     {MODKEY             , XK_Return               , spawn          , {.v = termcmd}}        ,
-    {MODKEY             , XK_y                    , spawn          , {.v = alacrittycmd}}   ,
+    {MODKEY             , XK_t                    , spawn          , {.v = alacrittycmd}}   ,
     {MODKEY             , XK_c                    , spawn          , {.v = fcitx5cmd}}      ,
     {MODKEY             , XK_v                    , spawn          , {.v = clipmenucmd}}    ,
     {MODKEY             , XK_g                    , spawn          , {.v = browsercmd}}     ,
     {MODKEY | ShiftMask , XK_g                    , spawn          , {.v = qutebroswercmd}} ,
-    {MODKEY             , XK_e                    , spawn          , {.v = thunderbirdcmd}} ,
+    // {MODKEY             , XK_e                    , spawn          , {.v = thunderbirdcmd}} ,
     {MODKEY | ShiftMask , XK_p                    , spawn          , {.v = hibernatecmd}}   ,
     {0                  , XF86XK_PowerOff         , spawn          , {.v = suspendcmd}}     ,
     {0                  , XF86XK_AudioLowerVolume , spawn          , {.v = downvol}}        ,
     //{ 0               , XF86XK_AudioMute        , spawn          , {.v = mutevol } }      ,
     {0                  , XF86XK_AudioRaiseVolume , spawn          , {.v = upvol}}          ,
-    {MODKEY             , XK_bracketleft          , spawn          , {.v = downvol}}        ,
-    {MODKEY             , XK_backslash            , spawn          , {.v = mutevol}}        ,
-    {MODKEY             , XK_bracketright         , spawn          , {.v = upvol}}          ,
+    //{MODKEY             , XK_bracketleft          , spawn          , {.v = downvol}}        ,
+    //{MODKEY             , XK_backslash            , spawn          , {.v = mutevol}}        ,
+    //{MODKEY             , XK_bracketright         , spawn          , {.v = upvol}}          ,
     {0                  , XK_Print                , spawn          , {.v = screenshotcmd}}  ,
-    {MODKEY | ShiftMask , XK_y                    , spawn          , {.v = screenkeycmd}}   ,
+    {MODKEY | ShiftMask , XK_t                    , spawn          , {.v = screenkeycmd}}   ,
     {MODKEY             , XK_b                    , togglebar      , {0}}                   ,
     {MODKEY             , XK_j                    , focusstack     , {.i = +1}}             ,
     {MODKEY             , XK_k                    , focusstack     , {.i = -1}}             ,
@@ -121,7 +123,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask , XK_Return               , zoom           , {0}}                   ,
     {MODKEY             , XK_Tab                  , view           , {0}}                   ,
     {MODKEY | ShiftMask , XK_c                    , killclient     , {0}}                   ,
-    {MODKEY             , XK_t                    , setlayout      , {.v = &layouts[0]}}    ,
+    {MODKEY             , XK_y                    , setlayout      , {.v = &layouts[0]}}    ,
     {MODKEY             , XK_f                    , setlayout      , {.v = &layouts[1]}}    ,
     {MODKEY             , XK_m                    , setlayout      , {.v = &layouts[2]}}    ,
     {MODKEY | ShiftMask , XK_f                    , fullscreen     , {0}}                   ,
